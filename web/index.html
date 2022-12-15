@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+ <style>
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+    
+    
+    
+    
+    <link rel="stylesheet" href="style.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">  
+            <div class="logo-container">
+                <h1 class="logo">RTS</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a href="index.html#movies">New Releases</a></li>
+                    <li class="menu-list-item"><a href="index.html#popular">Popular</a></li>
+                     <li class="menu-list-item"><a href="index.html#recmov">Recommended Movies</a></li>
+                    <li class="menu-list-item"><a href="index.html#trends">Trends</a></li>
+
+                </ul>
+            </div>
+            <div class="profile-container">     
+                <div class="profile-text-container">
+                    <div class="dropdown">
+                     <button class="dropbtn">LOGIN</button>
+                        <div class="dropdown-content">
+                             <a href="userlogin.html">User</a>
+                                <a href="adminlogin.html">Admin</a>
+                            </div>
+                    </div>
+<!--                    <i class="fas fa-caret-down"></i>-->
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="genticket.html"><i class="left-menu-icon fas fa-home"></i></a>
+        <a href="newjsp.jsp"><i class="left-menu-icon fas fa-address-card" aria-hidden="true"></i></a>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/wakenda.jpg');">
+                <p class="featured-desc">Black Panther: Wakanda Forever is a 2022 American superhero film based on the Marvel Comics character Black Panther. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to Black Panther (2018</p>
+                <button class="featured-button"><a href="https://youtu.be/_Z3QKkl1WyM">WATCH TRAILER</a></button>
+            </div>
+            <div class="movie-list-container" id="movies">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/batman.jpg" alt="">
+                            <span class="movie-list-item-title">The Batman</span>
+                            <p class="movie-list-item-desc">The Batman is a 2022 American superhero film based on the DC Comics character Batman.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/marry.jpg" alt="">
+                            <span class="movie-list-item-title">Marry Me</span>
+                            <p class="movie-list-item-desc">Marry Me is a 2022 American romantic comedy-drama film directed by Kat Coiro, with a screenplay by John Rogers.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/lost.jpg " alt="">
+                            <span class="movie-list-item-title">The Lost City</span>
+                            <p class="movie-list-item-desc">The Lost City[5] is a 2022 American action-adventure comedy film directed by the Nee brothers, who co-wrote the screenplay with Oren.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/charted.jpg" alt="">
+                            <span class="movie-list-item-title">Uncharted</span>
+                            <p class="movie-list-item-desc">Uncharted is a 2022 American action-adventure film directed by Ruben Fleischer from a screenplay by Rafe Lee Judkins.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/happy.jpg" alt="">
+                            <span class="movie-list-item-title">After Ever Happy</span>
+                            <p class="movie-list-item-desc">After Ever Happy is a 2022 American romantic drama film directed by Castille Landon, from a screenplay by Sharon Soboil.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/goodby.jpg" alt="">
+                            <span class="movie-list-item-title">Goodbye</span>
+                            <p class="movie-list-item-desc">Goodbye[3] is a 2022 Indian Hindi-language family comedy-drama film written and directed by Vikas Bahl and produced by Bahl, Viraj Savant.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container" id="popular">
+                <h1 class="movie-list-title">POPULAR</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/rrr.jpg" alt="">
+                            <span class="movie-list-item-title">RRR</span>
+                            <p class="movie-list-item-desc">RRR[a] is a 2022 Indian Telugu-language epic action drama film directed by S. S. Rajamouli.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bhool.jpg" alt="">
+                            <span class="movie-list-item-title">Bhool Bhulaiyaa 2</span>
+                            <p class="movie-list-item-desc">Bhool Bhulaiyaa 2 (transl. Labyrinth 2) is a 2022 Indian Hindi-language comedy horror film directed by Anees Bazmee. </p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/files.jpg" alt="">
+                            <span class="movie-list-item-title">The Kashmir Files</span>
+                            <p class="movie-list-item-desc">The Kashmir Files is a 2022 Indian Hindi-language drama film[2] written and directed by Vivek Agnihotri.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/thursday.jpg" alt="">
+                            <span class="movie-list-item-title">A Thursday</span>
+                            <p class="movie-list-item-desc">A Thursday is a 2022 Indian Hindi-language thriller film written and directed by Behzad Khambata. The film was produced by RSVP Movies.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/radhe.jpg" alt="">
+                            <span class="movie-list-item-title">Radhe Shyam</span>
+                            <p class="movie-list-item-desc">Radhe Shyam is a 2022 Indian period romantic drama film written and directed by Radha Krishna Kumar.</p>
+                            <button class="movie-list-item-button"><a href="book.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bachchan.jpg" alt="">
+                            <span class="movie-list-item-title">Bachchhan Paandey</span>
+                            <p class="movie-list-item-desc">Bachchhan Paandey is a 2022 Indian Hindi-language action comedy film directed by Farhad Samji and produced by Sajid Nadiadwala.</p>
+                            <button class="movie-list-item-button"><a href="book.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bp.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="book.html">BOOK</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
+                <img class="featured-title" src="img/f-t-2.png" alt="">
+                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+                    minima voluptatibus incidunt. Accusamus, provident.</p>
+                <button class="featured-button">WATCH TRAILER</button>
+            </div>
+            <div class="movie-list-container"id="recmov">
+                <h1 class="movie-list-title">Recommended Movies</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/777.jpg" alt="">
+                            <span class="movie-list-item-title">777 Charlie</span>
+                            <p class="movie-list-item-desc">777 Charlie is a 2022 Indian Kannada-language adventure comedy drama film written and directed by Kiranraj K.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/PS.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kartike.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/hey.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container" id="trends">
+                <h1 class="movie-list-title">TRENDS</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/17.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/18.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/19.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button"><a href="userlogin.html">BOOK</a></button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+   
+</body>
+
+</html>

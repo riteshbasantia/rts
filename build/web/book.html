@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Movie Seat Booking</title>
+        <link rel="stylesheet" href="book.css">
+        <style>
+        </style>
+        <script type="text/javascript">
+    window.onload=function(){
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("setTodaysDate")[0].setAttribute('min',today);
+    }
+      </script> 
+    </head>
+    <body>
+
+        <div>
+            <img class="main-logo" src="./img/logo.png"/>
+        </div>
+        
+        <form name="form1" action="book.jsp" onsubmit="required()">
+        <div class="movie-container">
+            <label style="font-size: 1em;">Enter Your Name:</label>
+            <input id="res" type="text" placeholder="Ritesh Basantia" name="nam">
+                <script>
+                    document.getElementById("res").innerHTML=localStorage.getItem("textvalue");
+                    </script>
+        </div>
+
+
+
+        <div class="movie-container">
+            <label style="font-size: 1em;">Select Movie:</label>
+            <select id="movie1" name="sm">
+                <option>Batman</option>
+                <option>After</option>
+                <option>Daman</option>
+                <option>PS-1</option>
+                <option>Black Panther</option>
+                <option>Drishyam-2</option>
+            </select>
+        </div>
+        <div class="movie-container">
+            <label style="font-size: 1em;">Choose Threter Screen</label>
+            <select id="movie" name="mv" onClick="multiply();">
+                <option  class="mvp" value1="150">Cinepolis</option>
+                <option class="mvp" value1="110">Maharaja</option>
+                <option class="mvp" value1="100">Keshari Talkies</option>
+                <option class="mvp" value1="120">Sriya</option>
+                <option class="mvp" value1="100">Swati</option>
+                <option class="mvp" value1="180">Inox</option>
+            </select>
+        </div> 
+        <div class="movie-container">
+            <label style="font-size: 1em;">Choose Date</label>
+           <input name="setTodaysDate" type="date">  
+            <label style="font-size: 1em;">Show Time</label>
+            <select id="time" name="ctime">
+                <option>6.00AM</option>
+                <option>8.45AM</option>
+                <option>12.15PM</option>
+                <option>3.00PM</option>
+                <option>6.15PM</option>
+                <option>9.00PM</option>
+            </select>
+        </div>
+        
+         <div class="movie-container">       
+         <label style="font-size: 1em;">No. of Seats</label>
+            <select  id="seat" name="seat" onClick="multiply();">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+          <label style="font-size: 1em;">Total Price</label>
+          <input type="text" id="price" name="price" value="0" onChange="multiply();">
+       </div>
+        <div class="btprc">
+            <a href="book.jsp" action="book.jsp">
+                <button class="btn-home">
+                    Proceed To Pay
+                </button>
+            </a>
+        </div>
+   </form>
+        <div class="bthome">
+            <a href="book.html">
+                <button class="btn-home">
+                    Reset
+                </button>
+            </a>
+            <a href="./index.html">
+                <button class="btn-home">
+                    Home
+                </button>
+            </a>
+
+        </div>
+
+ 
+        <script>
+             
+function required()
+{
+var empt = document.forms["form1"]["nam"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Code has accepted : you can try another');
+return true; 
+}
+}
+            
+//            function calculate()
+//            {
+//               var seat=document.getElementById('seat').value;
+//                var mov=document.getElementById('movie').value;
+//               var price= seat * 100;
+//                document.getElementById('price').innerHTML= price;
+//                return(price);
+//           }
+//
+//
+//var count=0;
+//      var seats=document.getElementsByClassName("seat");
+//    for(var i=0;i<seats.length;i++){
+//        var item=seats[i];
+//        
+//        
+//        item.addEventListener("click",(event)=>{
+//          var price= document.getElementById("movie").value;
+//          var p=100;
+//          if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected')){
+//          count++;
+//          var total=seats * p;
+//          event.target.classList.add("selected");
+//          document.getElementByClassName("count1").innertext=count; //2
+//          document.getElementByClassName("price").innertext=total;
+        function multiply(){
+            var seat = document.getElementById("seat");
+            var optionValue = seat.options[seat.selectedIndex].value;
+//            console.log(optionValue);
+//            console.log(seat.value);
+            var mv = document.getElementById("movie");
+            var moviePrice=mv.options[mv.selectedIndex].getAttribute('value1');
+//            console.log(moviePrice);
+            var totalPrice=document.getElementById("price");
+            totalPrice.value=moviePrice * optionValue ;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 14-Dec-2022, 12:16:28 am
+    Author     : DELL
+*/
+body {
+	background: red;
+}
+
+.otp-form .otp-field {
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	font-size: 2rem;
+	line-height: 4rem;
+	text-align: center;
+	border: none;
+	border-bottom: 2px solid var(--bs-secondary);
+	outline: none;
+}
+
+
+.otp-form .otp-field:focus {
+	border-bottom-color: var(--bs-dark);
+}

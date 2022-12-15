@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="otp.css" type="text/css"/>
+
+
+
+
+    </head>
+    <body>
+       <div class="container">
+	<div class="row justify-content-center align-items-center vh-100">
+		<div class="card col-12 col-md-8 col-lg-7 p-4">
+			<div class="card-body">
+				<h4 class="card-title text-center">OTP Verificattion</h4>
+				<div class="card-text text-center mt-5">
+					<form action="" class="otp-form">
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+						<input class="otp-field" type="text" name="opt-field[]" maxlength=1>
+
+						<!-- Store OTP Value -->
+						<input class="otp-value" type="hidden" name="opt-value">
+						<div class="d-block mt-4">
+							<button class="btn btn-primary" type="submit">Verify</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+           <script>
+               $(document).ready(function () {
+	$(".otp-form *:input[type!=hidden]:first").focus();
+	let otp_fields = $(".otp-form .otp-field"),
+		otp_value_field = $(".otp-form .otp-value");
+	otp_fields
+		.on("input", function (e) {
+			$(this).val(
+				$(this)
+					.val()
+					.replace(/[^0-9]/g, "")
+			);
+			let opt_value = "";
+			otp_fields.each(function(){
+				let field_value = $(this).val();
+				if (field_value != "") opt_value += field_value;
+			});
+			otp_value_field.val(opt_value);
+		})
+		.on("keyup", function (e) {
+			let key = e.keyCode || e.charCode;
+			if (key == 8 || key == 46 || key == 37 || key == 40) {
+				// Backspace or Delete or Left Arrow or Down Arrow
+				$(this).prev().focus();
+			} else if (key == 38 || key == 39 || $(this).val() != "") {
+				// Right Arrow or Top Arrow or Value not empty
+				$(this).next().focus();
+			}
+		})
+		.on("paste", function(e){
+			let paste_data = e.originalEvent.clipboardData.getData("text");
+			let paste_data_splitted = paste_data.split("");
+			$.each(paste_data_splitted, function (index, value) {
+				otp_fields.eq(index).val(value);
+			});
+		});
+});
+
+           </script>
+    </body>
+</html>

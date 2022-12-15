@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="loginStyle.css">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Great Job !");
+    });
+  });
+  </script>
+    </head>
+    <body>
+       <div class="form-box">
+           <div><h2>Admin Login</h2></div>
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<img src="images/icon/fb2.png">
+				<img src="images/icon/insta2.png">
+				<img src="images/icon/tt2.png">
+			</div>
+			
+			<!-- Login Form -->
+                        <form id="login" class="input-group" action="admin.jsp">
+				<div class="inp">
+					<img src="images/icon/user.png"><input type="text" name="em" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" name="pwd" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/icon/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form id="register" class="input-group" action="serv1">
+				<input type="text" name="nm" class="input-field" placeholder="Full Name" required="required">
+				<input type="email" name="em" class="input-field" placeholder="Email Address" required="required">
+                                <input type="text" name="pn" class="input-field" placeholder="Mobile Number" required="required">
+				<input type="password" name="pwd" class="input-field" placeholder="Create Password" required="required">
+				
+				<input type="checkbox"  class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
